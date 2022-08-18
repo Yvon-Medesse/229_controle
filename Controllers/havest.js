@@ -59,7 +59,7 @@ exports.updateHavest = async(req,res)=>{
 }
 
 exports.IsAdmin = async(req,res,next)=>{
-    if(req.user.IsAdmin === true){
+    if(req.user.IsAdmin == true){
         next()
     }else{
         return res.status(403).json({message:"deleted isn't allowed"}) 
