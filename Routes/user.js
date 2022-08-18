@@ -1,9 +1,9 @@
 let express = require("express");
-const { profile, userProfile, IsAuth, requireAuth } = require("../Controllers/user");
+const {IsAuth, requireAuth } = require("../Controllers/user");
 let router = express.Router();
 
 router.use(requireAuth)
 router.use(IsAuth)
-router.get("/:id",profile, userProfile );
+router.get("/:id");
 
 module.exports = router;
